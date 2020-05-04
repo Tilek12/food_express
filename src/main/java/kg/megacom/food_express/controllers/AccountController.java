@@ -1,0 +1,24 @@
+package kg.megacom.food_express.controllers;
+
+import kg.megacom.food_express.models.dto.AccountDto;
+import kg.megacom.food_express.services.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(value = "/account")
+public class AccountController {
+
+    @Autowired
+    private AccountService accountService;
+
+    @PostMapping(value = "/save")
+    public AccountDto saveAccount(@RequestBody AccountDto accountDto){
+
+        return accountService.saveAccount(accountDto);
+
+    }
+}
