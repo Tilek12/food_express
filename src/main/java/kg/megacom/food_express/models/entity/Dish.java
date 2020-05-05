@@ -23,7 +23,7 @@ public class Dish {
     @JoinColumn(name = "menu_id")
     private Menu menu;
 
-    @OneToMany(mappedBy = "dishes")
+    @OneToMany //(mappedBy = "dishes")
     List<OrderDetail> orderDetailList;
 
 }

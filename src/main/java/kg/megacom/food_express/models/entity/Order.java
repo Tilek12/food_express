@@ -24,12 +24,12 @@ public class Order {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @OneToMany(mappedBy = "orders")
+    @OneToMany //(mappedBy = "orders")
     List<RestaurantOrder> restaurantOrderList;
 
-    @OneToMany(mappedBy = "orders")
+    @OneToMany //(mappedBy = "orders")
     List<OrderDetail> orderDetailList;
 
-    @OneToMany(mappedBy = "orders")
+    @OneToMany //(mappedBy = "orders")
     List<OrderStatus> orderStatusList;
 }
