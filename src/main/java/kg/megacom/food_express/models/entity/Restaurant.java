@@ -18,6 +18,6 @@ public class Restaurant {
     private String name;
     private boolean isActive;
 
-    @OneToMany //(mappedBy = "restaurants")
+    @OneToMany (mappedBy = "restaurant")
     List<RestaurantOrder> restaurantOrderList;
 }

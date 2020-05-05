@@ -16,14 +16,17 @@ public class Dish {
     private Long id;
 
     private String name;
+
     private double size;
+
+    @Column(name = "is_active")
     private boolean isActive;
 
     @ManyToOne
     @JoinColumn(name = "menu_id")
     private Menu menu;
 
-    @OneToMany //(mappedBy = "dishes")
+    @OneToMany (mappedBy = "dish")
     List<OrderDetail> orderDetailList;
 
 }

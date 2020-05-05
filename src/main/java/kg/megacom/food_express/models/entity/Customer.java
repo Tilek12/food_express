@@ -14,6 +14,7 @@ public class Customer {
     @Column(name = "customer_id")
     private Long id;
 
+
     private String name;
     private String address;
     private String phone;

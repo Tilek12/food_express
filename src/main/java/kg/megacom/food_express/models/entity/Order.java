@@ -17,19 +17,21 @@ public class Order {
     @Column(name = "order_id")
     private Long id;
 
+    @Column(name = "create_date")
     private Date createDate;
+
     private double cost;
 
     @OneToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @OneToMany //(mappedBy = "orders")
+    @OneToMany (mappedBy = "order")
     List<RestaurantOrder> restaurantOrderList;
 
-    @OneToMany //(mappedBy = "orders")
+    @OneToMany (mappedBy = "order")
     List<OrderDetail> orderDetailList;
 
-    @OneToMany //(mappedBy = "orders")
+    @OneToMany (mappedBy = "order")
     List<OrderStatus> orderStatusList;
 }
